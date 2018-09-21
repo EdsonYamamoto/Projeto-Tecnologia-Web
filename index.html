@@ -29,48 +29,57 @@
         <h1>Trabalho de Tecnologia WEB</h1>
       </div>
     </head>
+
     <div class="formBox">
       <div class="formLabel">
-        <label for="inputText">Texto</label>
+        <label for="inputText">
+          Texto</label>
       </div>
       <div class="formInput">
-
+        <input type="text" id="inputText">
       </div>
     </div>
-    <input type="text" id="inputText">
     <hr>
-    <label for="inputDate" id>Data</label>
-    <input type="date" id="inputDate">
+    <div class="formBox">
+      <div class="formLabel">
+        <label for="inputDate" id>Data</label>
+      </div>
+      <div class="formInput">
+        <input type="date" id="inputDate">
+      </div>
+    </div>
     <hr>
-    <label for="inputSelect" id>Select</label>
-    <select name="" id="inputSelect">
-      <option value="h">Homen</option>
-      <option value="m">Mulher</option>
-    </select>
+
+    <div class="formBox">
+      <div class="formLabel">
+        <label for="inputSelect" id>Select</label>
+      </div>
+      <div class="formInput">
+        <select name="" id="inputSelect">
+          <option value="h">Homen</option>
+          <option value="m">Mulher</option>
+        </select>
+      </div>
+    </div>
+
     <hr>
-    <button onclick="met()">botao</button>
-    <div id="IdTeste"></div>
-
-  </div>
-</body>
-
-</html>
+    <button class="salvar" onclick="met()">botao</button>
+    <div class="tabelaGeral">
+      <div id="IdTeste"></div>
+    </div>
 
 
-<!DOCTYPE html>
-<html lang="en">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="bolacha">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae est quisquam aliquid hic sint, vero dignissimos, recusandae
-      quis facere aspernatur iste ullam quidem tenetur eum omnis. Provident cupiditate tenetur facilis.</p>
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <p>Some text. Some text. Some text.</p>
+          <p>Some text. Some text. Some text.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
