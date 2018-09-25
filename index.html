@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>WEB</title>
   <!--
     JQUERY
   -->
@@ -18,28 +18,51 @@
 </head>
 
 <body>
-  <!--
-    onclick contem o método que vou usar pra fazer funcionar a lógica.
-  <-->
+
   <div class="container">
 
     <head>
       <div class="centrado title">
 
-        <h1>Trabalho de Tecnologia WEB</h1>
+        <h1>Trabalho de Tecnologias WEB</h1>
       </div>
     </head>
 
+    <hr>
+
     <div class="formBox">
       <div class="formLabel">
-        <label for="inputText">
-          Texto</label>
+        <label for="inputText">Nome</label>
       </div>
       <div class="formInput">
-        <input type="text" id="inputText">
+        <input type="text" id="inputNome" class="inputNome">
       </div>
     </div>
+
     <hr>
+
+    <div class="formBox">
+      <div class="formLabel">
+        <label for="inputText">E-mail</label>
+      </div>
+      <div class="formInput">
+        <input type="text" id="inputEmail">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="formBox">
+      <div class="formLabel">
+        <label for="inputText">CPF</label>
+      </div>
+      <div class="formInput">
+        <input type="text" id="inputCPF" class="inputCPF">
+      </div>
+    </div>
+
+    <hr>
+
     <div class="formBox">
       <div class="formLabel">
         <label for="inputDate" id>Data</label>
@@ -48,38 +71,41 @@
         <input type="date" id="inputDate">
       </div>
     </div>
+
     <hr>
 
     <div class="formBox">
       <div class="formLabel">
-        <label for="inputSelect" id>Select</label>
+        <label for="inputSexo" id>Sexo</label>
       </div>
       <div class="formInput">
-        <select name="" id="inputSelect">
-          <option value="h">Homen</option>
-          <option value="m">Mulher</option>
+        <select name="" id="inputSexo">
+          <option value="Homem">Homen</option>
+          <option value="Mulher">Mulher</option>
         </select>
       </div>
     </div>
 
     <hr>
-    <button class="salvar" onclick="met()">botao</button>
+
+    <button class="salvar" onclick="met()">Salvar</button>
+
     <div class="tabelaGeral">
       <div id="IdTeste"></div>
     </div>
 
-
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
-
-    <div id="id01" class="w3-modal">
-      <div class="w3-modal-content">
-        <div class="w3-container">
-          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-          <p>Some text. Some text. Some text.</p>
-          <p>Some text. Some text. Some text.</p>
-        </div>
-      </div>
+    <div >
+      <table id="tabCrud" class="bordasimples">
+        <tr>
+          <td>Nome</td>
+          <td>E-Mail</td>
+          <td>CPF</td>
+          <td>Data</td>
+          <td>Sexo</td>
+        </tr>
+      </table>
     </div>
+
   </div>
 </body>
 
