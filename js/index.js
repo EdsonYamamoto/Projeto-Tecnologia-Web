@@ -1,24 +1,24 @@
 var count = 1;
 
-$(document).on('keypress', 'input.inputCPF', function(e) {
-  var key = (window.event)?event.keyCode:e.which;
-  if((key > 47 && key < 58)) {
-      return true;   
-    } 
-    else {
-     return (key == 8 || key == 0)?true:false;
-   }
+$(document).on('keypress', 'input.inputCPF', function (e) {
+  var key = (window.event) ? event.keyCode : e.which;
+  if ((key > 47 && key < 58)) {
+    return true;
+  }
+  else {
+    return (key == 8 || key == 0) ? true : false;
+  }
 });
 
 $(function () {
 
-  function Excluir(){
+  function Excluir() {
     var par = $(this).parent().parent();
     if (confirm('Deseja excluir o registro?'))
       par.remove();
   };
 
-  function Editar(){
+  function Editar() {
     var par = $(this).parent().parent(); //tr
     var tdNome = par.children("td:nth-child(1)");
     var tdEmail = par.children("td:nth-child(2)");
@@ -26,14 +26,14 @@ $(function () {
     var tdData = par.children("td:nth-child(4)");
     var tdSexo = par.children("td:nth-child(5)");
 
-    tdNome.html("<input type ='text' value='"+tdNome.html()+"'/td>");
-    tdEmail.html("<input type='text' id='txtEmail' value='"+tdEmail.html()+"'/>");
-    tdCPF.html("<input type='text'id='txtDN' value='"+tdCPF.html()+"'/>");
-    tdData.html("<input type='text'id='txtDN' value='"+tdData.html()+"'/>");
-    tdSexo.html("<input type='text'id='txtDN' value='"+tdSexo.html()+"'/>");
+    tdNome.html("<strong><input type ='text' value='" + tdNome.html() + "'/td></strong>");
+    tdEmail.html("<strong><input type='text' id='txtEmail' value='" + tdEmail.html() + "'/></strong>");
+    tdCPF.html("<strong><input type='text'id='txtDN' value='" + tdCPF.html() + "'/></strong>");
+    tdData.html("<strong><input type='text'id='txtDN' value='" + tdData.html() + "'/></strong>");
+    tdSexo.html("<strong><input type='text'id='txtDN' value='" + tdSexo.html() + "'/></strong>");
   }
 
-  function FunSal(){
+  function FunSal() {
     var par = $(this).parent().parent(); //tr
     var tdNome = par.children("td:nth-child(1)");
     var tdEmail = par.children("td:nth-child(2)");
@@ -62,37 +62,34 @@ function met() {
   var inputEmail = $("#inputEmail").val();
   var inputCPF = $("#inputCPF").val();
 
-  var linha = $('<tr><td class="idNome" ' + count + '" id="idNome' + count + '">'+ inputNome +
-                '</td> <td  id="idEmail' + count + '"> ' + inputEmail + 
-                '</td> <td id="idCPF' + count + '">' + inputCPF + 
-                '</td> <td id="idData' + count + '">' + inputDate + 
-                '</td> <td id="idSexo' + count + '">' + inputSexo + 
-                '</td> <td><input type="button" class="ExBut" value="Excluir"/>' + 
-                '</td> <td><input type="button" class="AltBut" value="Alterar"/>' + 
-                '</td> <td><input type="button" class="salBut" value="Salvar"/></td></tr>'
+  var linha = $('<tr><td class="idNome" ' + count + '" id="idNome' + count + '">' + inputNome +
+    '</td> <td  id="idEmail' + count + '"> ' + inputEmail +
+    '</td> <td id="idCPF' + count + '">' + inputCPF +
+    '</td> <td id="idData' + count + '">' + inputDate +
+    '</td> <td id="idSexo' + count + '">' + inputSexo +
+    '</td> <td><input type="button" class="ExBut" value="Excluir"/>' +
+    '</td> <td><input type="button" class="AltBut" value="Alterar"/>' +
+    '</td> <td><input type="button" class="salBut" value="Salvar"/></td></tr>'
   )
 
   this.count++;
 
-  if(inputNome == undefined || inputNome==""){
+  if (inputNome == undefined || inputNome == "") {
     alert("O campo Nome é obrigatório")
   }
-  else if(inputEmail == undefined || inputEmail=="")
-  {
+  else if (inputEmail == undefined || inputEmail == "") {
     alert("O campo E-mail é obrigatório!")
   }
-  else if(!emailReg.test(inputEmail)){
+  else if (!emailReg.test(inputEmail)) {
     alert("E-mail com formato invalido")
   }
-  else if(inputCPF == undefined || inputCPF=="")
-  {
+  else if (inputCPF == undefined || inputCPF == "") {
     alert("O campo CPF é obrigatório!")
   }
-  else if(inputDate == undefined || inputDate=="")
-  {
+  else if (inputDate == undefined || inputDate == "") {
     alert("Selecione uma data válida")
   }
-  else{
+  else {
     $('#tabCrud').append(linha);
 
     $("#inputNome").val("");

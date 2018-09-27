@@ -1,18 +1,30 @@
 body{
     padding: 10px;
-    background-color: rgb(173, 171, 171);
+    background-color:cornflowerblue;
+}
+.card{
+    padding: 10px;
+}.float-right{
+
+    float: right;
+
 }
 .salvar{
     background-color:blue;
     border: none;
     color: white;
-    padding: 20px;
+    padding: 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     border-radius: 100px;
+}
+.container{
+    padding: 20px;
+    margin: 20px
+
 }
 .title{
     font-family: Arial, Helvetica, sans-serif;
@@ -43,6 +55,15 @@ body{
 .btnEditar{
     padding: 10px;
 }
+.col40{
+	width: 400px;
+}
+.col30{
+	width: 300px;
+}
+.col50{
+	width: 500px;
+}
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -52,18 +73,63 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
-table, tr, td{
-    margin-top: 20px;
-    border: 1px solid black;
-    align-items: center;
-    background-color:darkcyan;
+table{
+    font-family: "Times New Roman", Times, serif;
+    border: 1px solid #FFFFFF;
+    width: 350px;
+    text-align: center;
+    border-collapse: collapse;
 }
-.ExBut{
-    background-color: rgb(202, 79, 79);
+th{
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 3px 2px;
+    background: #0B6FA4;
 }
-.AltBut{
-    background-color: rgb(218, 218, 111);
+tr:nth-child(even){
+  background: #D0E4F5;
+} 
+fieldset
+{
+    border:2px solid blue;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
 }
-.salBut{
-    background-color: rgb(67, 128, 67);
+legend
+{
+  margin-bottom:0px;
+  margin-left:16px;
+}
+td{
+  border: 1px solid #FFFFFF;
+  padding: 3px 2px;
+}
+table.bordasimples .ExBut {
+  text-align: right;
+  display: inline-block;
+  background: rgb(202, 79, 79);
+  color: #000000;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+table.bordasimples .AltBut {
+  text-align: right;
+  display: inline-block;
+  background: rgb(218, 218, 111);
+  color: #000000;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+table.bordasimples .salBut {
+  text-align: right;
+  display: inline-block;
+  background: rgb(67, 128, 67);
+  color: #000000;
+  padding: 2px 8px;
+  border-radius: 5px;
 }

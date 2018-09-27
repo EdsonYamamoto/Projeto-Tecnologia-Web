@@ -29,79 +29,83 @@
     </head>
 
     <hr>
+    <div class="container">
+      <fieldset>
+        <legend>Cadastro</legend>
+        <div class="card">
+          <div class="formBox col40">
+            <div class="formLabel">
+              <label for="inputText">Nome</label>
+            </div>
+            <div class="formInput">
+              <input type="text" id="inputNome" class="inputNome">
+            </div>
+          </div>
+        </div>
 
-    <div class="formBox">
-      <div class="formLabel">
-        <label for="inputText">Nome</label>
-      </div>
-      <div class="formInput">
-        <input type="text" id="inputNome" class="inputNome">
+        <div class="card">
+          <div class="formBox col40">
+            <div class="formLabel">
+              <label for="inputText">E-mail</label>
+            </div>
+            <div class="formInput">
+              <input type="text" id="inputEmail">
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="formBox col40">
+            <div class="formLabel">
+              <label for="inputText">CPF</label>
+            </div>
+            <div class="formInput">
+              <input type="text" id="inputCPF" class="inputCPF">
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="formBox col40">
+            <div class="formLabel">
+              <label for="inputDate" id>Data</label>
+            </div>
+            <div class="formInput">
+              <input type="date" id="inputDate">
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="formBox col40">
+            <div class="formLabel">
+              <label for="inputSexo" id>Sexo</label>
+            </div>
+            <div class="formInput">
+              <select name="" id="inputSexo">
+                <option value="Homem">Homen</option>
+                <option value="Mulher">Mulher</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <button class="salvar float-right" onclick="met()">Salvar</button>
+      </fieldset>
+      <div class="tabelaGeral">
+        <div id="IdTeste"></div>
       </div>
     </div>
 
-    <hr>
-
-    <div class="formBox">
-      <div class="formLabel">
-        <label for="inputText">E-mail</label>
-      </div>
-      <div class="formInput">
-        <input type="text" id="inputEmail">
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="formBox">
-      <div class="formLabel">
-        <label for="inputText">CPF</label>
-      </div>
-      <div class="formInput">
-        <input type="text" id="inputCPF" class="inputCPF">
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="formBox">
-      <div class="formLabel">
-        <label for="inputDate" id>Data</label>
-      </div>
-      <div class="formInput">
-        <input type="date" id="inputDate">
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="formBox">
-      <div class="formLabel">
-        <label for="inputSexo" id>Sexo</label>
-      </div>
-      <div class="formInput">
-        <select name="" id="inputSexo">
-          <option value="Homem">Homen</option>
-          <option value="Mulher">Mulher</option>
-        </select>
-      </div>
-    </div>
-
-    <hr>
-
-    <button class="salvar" onclick="met()">Salvar</button>
-
-    <div class="tabelaGeral">
-      <div id="IdTeste"></div>
-    </div>
-
-    <div >
+    <div>
       <table id="tabCrud" class="bordasimples">
         <tr>
-          <td>Nome</td>
-          <td>E-Mail</td>
-          <td>CPF</td>
-          <td>Data</td>
-          <td>Sexo</td>
+          <th>Nome</th>
+          <th>E-Mail</th>
+          <th>CPF</th>
+          <th>Data</th>
+          <th>Sexo</th>
         </tr>
       </table>
     </div>
